@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: lightblue;
+  overflow-x: hidden;
+  font-family: "Times New Roman", Times, serif;;
 }
 
-.App-link {
-  color: #61dafb;
+ .main-div{
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+ }
+
+ .main-div h1{
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+ }
+ .add-items{
+  display: flex;
+ }
+
+ .main-input{
+  flex:1 1 0%;
+ padding: 0.5rem;
+ margin-right: 0.1rem;
+ width: 10rem;
+ border: 2px solid #555;
+ outline: none;
+ transition: 0.5s;
+ }
+
+ .addBtn{
+  width: 5rem;
+  cursor: pointer;
+  border: 2px solid black;
+  margin: 0 0.5rem 0 0.5rem;
+ }
+ .delBtn{
+  width: 5rem;
+  border: 2px solid black;
+  cursor: pointer;
+ }
+ .addBtn:hover{
+  background-color: aliceblue;
+}
+ .delBtn:hover{
+  background-color: aliceblue;
+}
+ .showItems{
+  width: 35rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+ }
+
+ .eachItem{
+  width: 35rem;
+  padding: 0.3rem;
+  word-wrap: break-word;
+  border-radius: 5px;
+  border: 1px groove black;
+  margin-top: 1rem;
+ }
+
+ .checkBtn{
+  margin: 0 0.3rem 0 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+ @media screen and (max-width: 700px) {
+  *{
+    overflow-x: hidden;
   }
-  to {
-    transform: rotate(360deg);
+  .main-div{
+    width: 30rem;
+    margin: 1 auto;
   }
-}
+
+  .showItems{
+    width: 100%;
+    font-size: 1.3rem;
+  }
+  .add-items{
+    width: 100%;
+  }
+  .main-div h1{
+    font-size: 2rem;
+  }
+  .eachItem{
+    width: 25rem;
+  }
+ }
+
+ 
+ @media screen and (max-width: 490px){
+  .main-div{
+    width: 25rem;
+    margin: 1 auto;
+  }
+
+  .add-items{
+    width: 85%;
+  }
+  .addBtn{
+    width: 4rem;
+  }
+  .delBtn{
+    width: 4rem;
+  }
+  .showItems{
+    width: 20rem;
+    font-size: 1rem;
+  }
+  .eachItem{
+    width: 18rem;
+  }
+ }
